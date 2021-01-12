@@ -1,0 +1,76 @@
+* {
+    font-family: 'Work Sans', sans-serif;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-top: 1.9rem;
+    color: rgb(207, 207, 207);
+    text-align: center;
+}
+
+.header {
+    height: 20vh;
+    background-color: black;
+}
+
+/* Search bar */
+
+.sidebar {
+    background-color: rgb(143, 145, 145);
+    height: 80vh;
+}
+
+h3 {
+    margin-top: 1rem;
+}
+
+/* h3, 
+input,
+.list-group {
+    margin-left: 1rem;
+} */
+
+
+input[type=text] {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    padding: 5px;
+}
+
+.list-group {
+    margin-top: 1rem;
+}
+
+/* Main content */
+
+.main {
+    background-color: rgb(207, 207, 207);
+    height: 80vh;
+}
+
+
+@media only screen and (max-width: 640px) {
+    h1 {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    h1 {
+        font-size: 2rem;
+        margin-top: 2.2rem;
+    }
+}
+
+@media only screen and (max-width: 326px) {
+    h1 {
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+}
