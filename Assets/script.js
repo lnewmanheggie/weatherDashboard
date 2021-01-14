@@ -78,9 +78,11 @@ function predictedDays(lat, lon, cityName) {
                 $("#humidity").text(humidity + "%");
                 $("#wind").text(windSpeed + "MPH");
                 $("#uv").text(uvIndex);
-                if (parseInt(uvIndex) >= 3 && parseInt(uvIndex) < 6) {
+                if (uvIndex >= 3 && uvIndex < 6) {
                     $("#uv").attr("class", "badge badge-warning")
-                } else if (parseInt(uvIndex) >= 6) {
+                } else if (uvIndex < 3) {
+                    $("#uv").attr("class", "badge badge-success")
+                } else {
                     $("#uv").attr("class", "badge badge-danger")
                 }
                 let img = $("<img>").attr("src", iconUrl)
