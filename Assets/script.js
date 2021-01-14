@@ -72,6 +72,7 @@ function predictedDays(lat, lon, cityName) {
             let iconUrl = "http://openweathermap.org/img/wn/" + iconCode + "@2x.png"
 
             if (i === 0) {
+                cityName = cityName.charAt(0).toUpperCase() + cityName.slice(1); // convert first letter to uppercase
                 $("#city-name").text(cityName + " (" + currentDay + ")");
                 $("#temp").text(temp + "°F");
                 $("#humidity").text(humidity + "%");
