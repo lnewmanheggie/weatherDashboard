@@ -37,7 +37,7 @@ function getCityName(event) {
 }
 
 function getLatLon(cityName) {
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=692bc0b6ed564788405b67294e6bce50";
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=692bc0b6ed564788405b67294e6bce50";
     $.ajax({
         url: queryURL,
         method: "GET"
@@ -63,7 +63,6 @@ function predictedDays(lat, lon, cityName) {
 
         for (let i = 0; i < arr.length; i++) {
             let temp = arr[i].temp.day;
-            // temp = toFarenheit(temp);
             let humidity = arr[i].humidity;
             let windSpeed = arr[i].wind_speed;
             let uvIndex = arr[i].uvi;
@@ -110,12 +109,6 @@ function createCards() {
         let card = $("<div>").attr("class", "weather-card").attr("id", "card-" + i);
         cardBox.append(card);
     }
-}
-
-function toFarenheit(k) {
-    let f = (k - 273.15) * 1.80 + 32;
-    f = f.toFixed(1);
-    return f;
 }
 
 function saveCity(cityVal) {
