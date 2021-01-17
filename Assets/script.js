@@ -18,7 +18,7 @@ function populatePage() {
     getLatLon(searchedCities[0]);
     sidebar.empty()
     for (let i = 0; i < searchedCities.length; i++) {
-        let citySidebar = $("<li>").addClass("list-group-item").text(searchedCities[i]);
+        let citySidebar = $("<li>").attr("class", "list-group-item").text(searchedCities[i]);
         citySidebar.on("click", getSidebarData);
         sidebar.append(citySidebar);
     }
@@ -86,7 +86,7 @@ function predictedDays(lat, lon, cityName) {
                     $("#uv").attr("class", "badge badge-danger")
                 }
                 let img = $("<img>").attr("src", iconUrl)
-                img.addClass("big-icon");
+                img.attr("class", "big-icon");
                 $("#icon").empty();
                 $("#icon").append(img);
             }
@@ -107,7 +107,7 @@ function predictedDays(lat, lon, cityName) {
 function createCards() {
     cardBox.empty();
     for (let i = 1; i < 6; i++) {
-        let card = $("<div>").addClass("weather-card").attr("id", "card-" + i);
+        let card = $("<div>").attr("class", "weather-card").attr("id", "card-" + i);
         cardBox.append(card);
     }
 }
