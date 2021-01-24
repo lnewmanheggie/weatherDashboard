@@ -6,6 +6,10 @@ const searchBar = $("#search");
 const searchBtn = $("#search-btn");
 const search_form = $("#search_form");
 
+const getCity = () => JSON.parse(localStorage.getItem("searchedCities")) || [];
+
+const setCity = val => localStorage.setItem("searchedCities", JSON.stringify(val))
+
 $(document).ready(function () {
     populatePage();
     search_form.on("submit", getCityName);
@@ -129,11 +133,6 @@ function saveCity(cityVal) {
     populatePage()
 }
 
-function getCity() {
-    return JSON.parse(localStorage.getItem("searchedCities")) || []
-}
-function setCity(val) {
-    localStorage.setItem("searchedCities", JSON.stringify(val))
-}
+
 
 

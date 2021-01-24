@@ -3,8 +3,5 @@ Users can enter a location and weather dashboard will update with realtime data 
 
 ![Demo](./Assets/demo.gif)
 
-Link to deployed app:
-https://lnewmanheggie.github.io/weatherDashboard/
+[View the deployed app here](https://lnewmanheggie.github.io/weatherDashboard/)
 
-Link to repo:
-https://github.com/lnewmanheggie/weatherDashboard
